@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
+        <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'>
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/normalize.css">
@@ -22,34 +22,49 @@
 	<body>
 
 		<header class="main-header">
+			<div class="mobile-nav-open">
+				Menu<i class="fa fa-bars"></i>
+			</div>
+			<div class="mobile-nav">
+				<nav>
+					<a href="/lifeblue/index.html" title="Home">Home</a>
+					<a href="#" title="Products">Products</a>
+					<a href="#" title="About">About</a>
+					<a href="#" title="Directory">Directory</a>
+					<a href="#" title="Contact">Contact</a>
+				</nav>
+				<ul class="social">
+					<li><a href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+				</ul>
+			</div>
+
 			<div class="topbar">
 				<div class="grid">
 					<div class="topbar-section">
 						<i class="fa fa-envelope"></i>
-						info@hackerone.com
+						<a href="mailto:info@hackerone.com" title="Email address">info@hackerone.com</a>
 					</div>
 					<div class="topbar-section">
 						<i class="fa fa-phone"></i>
 						(837)234-9827
 					</div>
 					<div class="topbar-section">
-						<i class="fa fa-power-off"></i>
+						<a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
 					</div>
 					<div class="topbar-section">
-						<i class="fa fa-twitter"></i>
+						<a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
 					</div>
 					<div class="topbar-section">
-						<i class="fa fa-facebook"></i>
-					</div>
-					<div class="topbar-section">
-						<i class="fa fa-linkedin"></i>
+						<a href="#" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
 					</div>
 				</div>
 			</div>
 			<nav class="main-nav">
 				<a href="#" title="Products">Products</a>
 				<a href="#" title="About">About</a>
-				<a href="#" title="Home"></a>
+				<a href="/lifeblue/index.html" title="Home"></a>
 				<a href="#" title="Directory">Directory</a>
 				<a href="#" title="Contact">Contact</a>
 			</nav>
@@ -99,25 +114,27 @@
 
 		<div class="email-cta">
 			<div class="grid grid-pad">
-				<p>Don’t Miss Out On The Latest News and Information<br>From The World Of Application Security</p>
-				<p>Our Posts Delivered Straight To Your Inbox</p>
-				<form action="email.php">
-					<input placeholder="Email Address..." type="text" name="email">
-					<input type="submit">
-				</form>
+				<div class="col-1-1">
+					<p>Don’t Miss Out On The Latest News and Information<br>From The World Of Application Security</p>
+					<p>Our Posts Delivered Straight To Your Inbox</p>
+					<form action="email.php">
+						<input placeholder="Email Address..." type="text" name="email">
+						<input type="submit" value="submit">
+					</form>
+				</div>
 			</div>
 		</div>
 
-		<div class="grid grid-pad">
-			<div class="col-2-3">
-				<main>
+		<main class="blog-list">
+			<div class="grid grid-pad">
+				<div class="col-2-3">
 					<article class="single-post-preview">
 						<div class="featured-image">
 							<span class="post-cat"><a href="#" title="Post category">Business</a></span>
 						</div>
 						<header>
 							<div class="post-meta">
-								<p>Published: <time pubdate="pubdate">4/12/16</time></p>
+								<p>Published: <time datetime="2016-04-12T19:00">4/12/16</time></p>
 								<a class="post-author" rel="author" href="/author/john-doe">John Doe</a>
 							</div>
 							<h1>
@@ -128,12 +145,176 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec elementum diam. Pellentesque sit amet eleifend massa. Cras vehicula quis turpis in lobortis. Praesent purus ligula, feugiat a orci sit amet, tempus auctor elit. Vestibulum massa erat, semper nec felis at, aliquet ultricies justo. Suspendisse id felis posuere, interdum massa a, semper turpis. Etiam iaculis sem dolor. Nunc tincidunt interdum purus at posuere. Fusce pharetra dolor sed ipsum hendrerit molestie. Pellentesque ultrices cursus sagittis. Nullam orci lorem, faucibus in tristique vitae, vestibulum ac eros...</p>
 						</div>
 						<footer>
-							<p><span>Read More</span><span>12</span></p>
+							<div class="read-more"><a href="#" title="Read More">Read More</a></div>
+							<div class="comments"><a href="#" title="Read Comments"><i class="fa fa-comment"></i>12</a></div>
 						</footer>
 					</article>
-				</main>
-			</div>
-		</div>
 
+					<article class="single-post-preview">
+						<div class="featured-image">
+							<span class="post-cat"><a href="#" title="Post category">Business</a></span>
+						</div>
+						<header>
+							<div class="post-meta">
+								<p>Published: <time datetime="2016-04-12T19:00">4/12/16</time></p>
+								<a class="post-author" rel="author" href="/author/john-doe">John Doe</a>
+							</div>
+							<h1>
+								<a href="#" title="Post title">IT Security FAQ: Best Security Practices for iOS Devices In Today’s SMBs And Corporations</a>
+							</h1>
+						</header>
+						<div class="post-excerpt">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec elementum diam. Pellentesque sit amet eleifend massa. Cras vehicula quis turpis in lobortis. Praesent purus ligula, feugiat a orci sit amet, tempus auctor elit. Vestibulum massa erat, semper nec felis at, aliquet ultricies justo. Suspendisse id felis posuere, interdum massa a, semper turpis. Etiam iaculis sem dolor. Nunc tincidunt interdum purus at posuere. Fusce pharetra dolor sed ipsum hendrerit molestie. Pellentesque ultrices cursus sagittis. Nullam orci lorem, faucibus in tristique vitae, vestibulum ac eros...</p>
+						</div>
+						<footer>
+							<div class="read-more"><a href="#" title="Read More">Read More</a></div>
+							<div class="comments"><a href="#" title="Read Comments"><i class="fa fa-comment"></i>12</a></div>
+						</footer>
+					</article>
+
+					<article class="single-post-preview">
+						<div class="featured-image">
+							<span class="post-cat"><a href="#" title="Post category">Business</a></span>
+						</div>
+						<header>
+							<div class="post-meta">
+								<p>Published: <time datetime="2016-04-12T19:00">4/12/16</time></p>
+								<a class="post-author" rel="author" href="/author/john-doe">John Doe</a>
+							</div>
+							<h1>
+								<a href="#" title="Post title">IT Security FAQ: Best Security Practices for iOS Devices In Today’s SMBs And Corporations</a>
+							</h1>
+						</header>
+						<div class="post-excerpt">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec elementum diam. Pellentesque sit amet eleifend massa. Cras vehicula quis turpis in lobortis. Praesent purus ligula, feugiat a orci sit amet, tempus auctor elit. Vestibulum massa erat, semper nec felis at, aliquet ultricies justo. Suspendisse id felis posuere, interdum massa a, semper turpis. Etiam iaculis sem dolor. Nunc tincidunt interdum purus at posuere. Fusce pharetra dolor sed ipsum hendrerit molestie. Pellentesque ultrices cursus sagittis. Nullam orci lorem, faucibus in tristique vitae, vestibulum ac eros...</p>
+						</div>
+						<footer>
+							<div class="read-more"><a href="#" title="Read More">Read More</a></div>
+							<div class="comments"><a href="#" title="Read Comments"><i class="fa fa-comment"></i>12</a></div>
+						</footer>
+					</article>
+
+					<article class="single-post-preview">
+						<div class="featured-image">
+							<span class="post-cat"><a href="#" title="Post category">Business</a></span>
+						</div>
+						<header>
+							<div class="post-meta">
+								<p>Published: <time datetime="2016-04-12T19:00">4/12/16</time></p>
+								<a class="post-author" rel="author" href="/author/john-doe">John Doe</a>
+							</div>
+							<h1>
+								<a href="#" title="Post title">IT Security FAQ: Best Security Practices for iOS Devices In Today’s SMBs And Corporations</a>
+							</h1>
+						</header>
+						<div class="post-excerpt">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec elementum diam. Pellentesque sit amet eleifend massa. Cras vehicula quis turpis in lobortis. Praesent purus ligula, feugiat a orci sit amet, tempus auctor elit. Vestibulum massa erat, semper nec felis at, aliquet ultricies justo. Suspendisse id felis posuere, interdum massa a, semper turpis. Etiam iaculis sem dolor. Nunc tincidunt interdum purus at posuere. Fusce pharetra dolor sed ipsum hendrerit molestie. Pellentesque ultrices cursus sagittis. Nullam orci lorem, faucibus in tristique vitae, vestibulum ac eros...</p>
+						</div>
+						<footer>
+							<div class="read-more"><a href="#" title="Read More">Read More</a></div>
+							<div class="comments"><a href="#" title="Read Comments"><i class="fa fa-comment"></i>12</a></div>
+						</footer>
+					</article>
+
+					<article class="single-post-preview">
+						<div class="featured-image">
+							<span class="post-cat"><a href="#" title="Post category">Business</a></span>
+						</div>
+						<header>
+							<div class="post-meta">
+								<p>Published: <time datetime="2016-04-12T19:00">4/12/16</time></p>
+								<a class="post-author" rel="author" href="/author/john-doe">John Doe</a>
+							</div>
+							<h1>
+								<a href="#" title="Post title">IT Security FAQ: Best Security Practices for iOS Devices In Today’s SMBs And Corporations</a>
+							</h1>
+						</header>
+						<div class="post-excerpt">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec elementum diam. Pellentesque sit amet eleifend massa. Cras vehicula quis turpis in lobortis. Praesent purus ligula, feugiat a orci sit amet, tempus auctor elit. Vestibulum massa erat, semper nec felis at, aliquet ultricies justo. Suspendisse id felis posuere, interdum massa a, semper turpis. Etiam iaculis sem dolor. Nunc tincidunt interdum purus at posuere. Fusce pharetra dolor sed ipsum hendrerit molestie. Pellentesque ultrices cursus sagittis. Nullam orci lorem, faucibus in tristique vitae, vestibulum ac eros...</p>
+						</div>
+						<footer>
+							<div class="read-more"><a href="#" title="Read More">Read More</a></div>
+							<div class="comments"><a href="#" title="Read Comments"><i class="fa fa-comment"></i>12</a></div>
+						</footer>
+					</article>
+				</div>
+				<aside class="sidebar">
+					<div class="col-1-3">
+						<div class="widget">
+							<form action="search.php">
+								<input placeholder="Search..." type="text" name="email">
+							</form>
+						</div>
+						<div class="widget">
+							<div class="top-posts">
+								<div class="viewed">
+									<p class="top-posts-open">Most Viewed Posts</p>
+									<ol>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+									</ol>
+								</div>
+								<div class="commented">
+									<p>Most Commented Posts</p>
+									<ol>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+									</ol>
+								</div>
+								<div class="shared">
+									<p>Most Shared Posts</p>
+									<ol>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+										<li><a href="#" title="Blog post title">Lorem ipsum dolor sit, consectetur adipiscing elit.</a></li>
+									</ol>
+								</div>
+							</div>
+						</div>
+						<div class="widget">
+						<h3>Archives</h3>
+							<ul>
+								<li><a href="/lifeblue/archives.html#2016" title="2016 post archives">2016</a></li>
+								<li><a href="/lifeblue/archives.html#2015" title="2015 post archives">2015</a></li>
+								<li><a href="/lifeblue/archives.html#2014" title="2014 post archives">2014</a></li>
+								<li><a href="/lifeblue/archives.html#2013" title="2013 post archives">2013</a></li>
+								<li><a href="/lifeblue/archives.html#2012" title="2012 post archives">2012</a></li>
+							</ul>
+						</div>
+					</div>
+				</aside>
+			</div>
+		</main>
+		<footer>
+			<div class="grid grid-pad">
+				<div class="col-1-1">
+					<p>Copyright 2016 Hackerone</p>
+				</div>
+			</div>
+		</footer>
+ 		<script src="js/scripts.js"></script>
 	</body>
 </html>

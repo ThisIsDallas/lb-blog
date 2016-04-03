@@ -170,7 +170,7 @@ body {
 	margin-left: 8.33%
 }
 
-@media handheld, only screen and (max-width: 767px) {
+@media handheld, only screen and (max-width: 768px) {
 	.grid {
 		width: 100%;
 		min-width: 0;
@@ -276,4 +276,8 @@ body {
 		width: 0;
 		height: 0;
 	}
+}
+
+@media handheld, only screen and (max-width: 768px) {
+
 }
