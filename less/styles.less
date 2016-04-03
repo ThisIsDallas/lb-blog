@@ -1,8 +1,337 @@
-@gray: #999;
+/* Variables */
+
+@black: #000000;
+@darkGray: #8c8c8c;
+@lightGray: #f2f2f2;
+@blue: #216ba5;
+@orange: #d7800f;
 
 body {
-	background: @gray;
-	div {
-		width: 15px;
+	background-color: @lightGray;
+}
+
+/* Header */
+
+.topbar {
+	border-top: 4px solid @blue;
+	border-bottom: 1px solid @darkGray;
+	height: 40px;
+	background-color: #ffffff;
+	.topbar-section {
+		padding: 8px 10px 0 10px;
+		border-left: 1px solid @darkGray;
+		height: 36px;
+		color: @blue;
+		font-size: 14px;
+		font-family: "open-sans";
+		transition: background-color 1s ease;
+		&:first-child,
+		&:nth-child(2) {
+			float: left;
+		}
+		&:nth-child(n+3) {
+			float: right;
+		}
+		&:nth-child(2),
+		&:nth-child(3) {
+			border-right: 1px solid @darkGray;
+		}
+		&:hover {
+			background: @blue;
+			color: #ffffff;
+		}
 	}
 }
+
+.main-nav {
+	margin: 0;
+    padding: 50px 0;
+    text-align: center;
+    background: url('../img/bg-background.png') repeat;
+    a {
+    	font-family: "open-sans";
+    	color: @black;
+    	font-size: 22px;
+    	text-decoration: none;
+    	padding: 0 10px;
+    	&:nth-child(3) {
+    		background-image: url('../img/logo.png');
+    		background-repeat: no-repeat;
+    		width: 278px;
+    		height: 54px;
+    		background-size: 100%;
+			display: inline-block;
+			margin: 0 20px !important;
+			padding: 0;
+    	}
+    }
+}
+
+.news-alert {
+	background-color: @orange;
+	overflow: auto;
+	p {
+		margin: 0;
+		padding: 9px 20px;
+		a {
+			font-family: "open-sans";
+			font-weight: 600;
+			color: #ffffff;
+			text-decoration: none;
+		}
+	}
+}
+
+/* Featured Post */
+
+.featured-posts {
+	figure {
+		position: relative;
+		figcaption {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.7);
+			color: #ffffff;
+			padding: 10px;
+			p {
+				margin: 0 0 5px 0;
+			}
+			a {
+				position: relative;
+				color: #ffffff;
+				text-decoration: none;
+				font-size: 24px;
+				line-height: 24px;
+				font-family: "museo-slab";
+			}
+			.read-more {
+				font-size: 14px;
+				line-height: 14px;
+				color: #ffffff;
+				padding: 10px 30px 10px 0;
+				&:after {
+					content: "";
+					width: 20px;
+					height: 20px;
+					background-image: url('../img/read-more.svg');
+					background-repeat: no-repeat;
+					display: inline-block;
+				    position: absolute;
+				    right: 3px;
+				    top: 10px;				
+				}
+			}
+		}
+	}
+	.col-1-2 {
+		figure {
+			height: 500px;
+			background-image: url('../img/featured-large.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+	}
+	.col-1-4 figure {
+		height: 240px;
+		figcaption {
+			a {
+				font-size: 14px;
+				line-height: 14px;
+			}
+			p {
+				margin: 0;
+			}
+		}
+		&:first-child {
+			margin-bottom: 20px;
+			background-image: url('../img/featured-small1.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		&:last-child {
+			background-image: url('../img/featured-small3.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+	}
+	.col-1-4:last-child figure {
+		&:first-child {
+			background-image: url('../img/featured-small2.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;			
+		}
+		&:last-child {
+			background-image: url('../img/featured-small4.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;			
+		}
+	}
+}
+
+/* Email CTA */
+
+.email-cta {
+	margin: 20px 0;
+	padding: 0 0 20px 0;
+	background-image: url('../img/cta-bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;	
+	p {
+		color: #ffffff;
+		text-align: center;
+		margin: 0 0 5px 0;
+		&:first-child {
+			font-size: 32px;
+			line-height: 40px;
+			font-family: "museo-slab";
+		}
+		&:nth-child(2) {
+			font-family: "open-sans";
+			font-size: 20px;
+			line-height: 20px;
+			font-weight: lighter;
+			margin-bottom: 15px;
+		}
+	}
+	form {
+		width: 500px;
+		margin: 0 auto;
+		font-family: "open-sans";
+		font-size: 16px;
+		input {
+			&:first-child {
+				float: left;
+				width: 370px;
+				color: @darkGray;
+				border: 1px solid #000000;
+				border-radius: 7px;
+				padding: 8px;
+				&:focus {
+					outline: none;
+				}
+			}
+			&:last-child {
+				float: right;
+				width: 110px;
+				background-color: @orange;
+				color: #ffffff;
+				border: none;
+				text-transform: uppercase;
+				border-radius: 7px;
+				padding: 8px;
+				-webkit-box-shadow: inset 0px -3px 1px 0px rgba(148,89,12,1);
+				-moz-box-shadow: inset 0px -3px 1px 0px rgba(148,89,12,1);
+				box-shadow: inset 0px -3px 1px 0px rgba(148,89,12,1);
+				&:hover {
+					cursor: pointer;
+				}
+				&:focus {
+					outline: none;
+				}
+				&:active {
+					box-shadow: none;
+				}
+			}
+		}
+	}
+}
+
+/* Post List */
+
+.single-post-preview {
+	border: 1px solid @darkGray;
+	margin-bottom: 20px;
+	background: #ffffff;
+	padding-bottom: 20px;
+	.featured-image {
+		height: 300px;
+		background-image: url('../img/blog-featured.jpg');
+		background-size: cover;
+		background-position: center center;
+		position: relative;
+		.post-cat {
+			background: @blue;
+			font-size: 16px;
+			font-family: "open-sans";
+			font-style: italic;
+			padding: 5px 15px;
+			position: absolute;
+			a {
+				color: #ffffff;
+				text-decoration: none;
+			}
+		}
+	}
+	header {
+		padding: 20px;
+		.post-meta {
+			overflow: auto;
+			.post-author {
+				float: right;
+				color: @darkGray;
+				font-family: "museo-slab";
+				text-transform: uppercase;
+				font-size: 14px;
+				text-decoration: none;
+			}
+			p {
+				color: @darkGray;
+				font-family: "museo-slab";
+				text-transform: uppercase;
+				font-size: 14px;
+				&:first-child {
+					float: left;
+				}
+			}
+		}
+		h1 {
+			margin: 0;
+			font-family: "museo-slab";
+			font-size: 24px;
+			line-height: 30px;
+			a {
+				color: @black;
+				text-decoration: none;
+			}
+		}
+	}
+	.post-excerpt {
+		padding: 0 20px;
+		font-family: "open-sans";
+		font-size: 16px;
+		line-height: 26px;
+		font-weight: lighter;
+		p {
+			margin: 0;
+		}
+	}
+	footer {
+		background-color: @orange;
+		position: relative;
+		bottom: -20px;
+		p {
+			margin: 0;
+			color: #ffffff;
+			padding: 10px 20px;
+		}
+		span {
+			&:first-child:after {
+				content: "";
+				width: 20px;
+				height: 20px;
+				background-image: url('../img/read-more.svg');
+				background-repeat: no-repeat;
+				display: inline-block;
+				position: relative;
+				top: 5px;
+				left: 5px;
+			}
+			&:last-child {
+				float: right;
+			}
+		}
+	}
+}
+

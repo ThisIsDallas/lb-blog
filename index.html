@@ -7,14 +7,133 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+        <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
 
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/grid.css">
         <link rel="stylesheet" href="css/styles.css">
+
+        <script src="https://use.typekit.net/tak6mna.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
 	</head>
 	<body>
-		<h1>hi</h1>
+
+		<header class="main-header">
+			<div class="topbar">
+				<div class="grid">
+					<div class="topbar-section">
+						<i class="fa fa-envelope"></i>
+						info@hackerone.com
+					</div>
+					<div class="topbar-section">
+						<i class="fa fa-phone"></i>
+						(837)234-9827
+					</div>
+					<div class="topbar-section">
+						<i class="fa fa-power-off"></i>
+					</div>
+					<div class="topbar-section">
+						<i class="fa fa-twitter"></i>
+					</div>
+					<div class="topbar-section">
+						<i class="fa fa-facebook"></i>
+					</div>
+					<div class="topbar-section">
+						<i class="fa fa-linkedin"></i>
+					</div>
+				</div>
+			</div>
+			<nav class="main-nav">
+				<a href="#" title="Products">Products</a>
+				<a href="#" title="About">About</a>
+				<a href="#" title="Home"></a>
+				<a href="#" title="Directory">Directory</a>
+				<a href="#" title="Contact">Contact</a>
+			</nav>
+			<div class="news-alert">
+				<div class="grid">
+					<p><a href="#" title="News Alert">./NewsAlert.sh => Hackerone Secures Series A Financing - 04.16.2016</a></p>
+				</div>
+			</div>
+		</header>
+
+		<div class="featured-posts">
+			<div class="grid grid-pad">
+				<div class="col-1-2">
+					<figure>
+						<figcaption>
+							<p><a href="#" title="Featured Post">How To Introduce Scrum To Your Security Team</a></p>
+							<a class="read-more" href="#" title="Read More">Read More</a>
+						</figcaption>
+					</figure>
+				</div>
+				<div class="col-1-4">
+					<figure>
+						<figcaption>
+							<p><a href="#" title="Featured Post">Migrating from On-Prem To The Cloud? What You Should Know</a></p>
+						</figcaption>
+					</figure>
+					<figure>
+						<figcaption>
+							<p><a href="#" title="Featured Post">Is It time For Your Company to Hire A CISO?</a></p>
+						</figcaption>
+					</figure>
+				</div>
+				<div class="col-1-4">
+					<figure>
+						<figcaption>
+							<p><a href="#" title="Featured Post">Top Ten Security Concerns for BYOD Companies</a></p>
+						</figcaption>
+					</figure>
+					<figure>
+						<figcaption>
+							<p><a href="#" title="Featured Post">Our 2016 State of E-Commerce Website Security Report</a></p>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+
+		<div class="email-cta">
+			<div class="grid grid-pad">
+				<p>Don’t Miss Out On The Latest News and Information<br>From The World Of Application Security</p>
+				<p>Our Posts Delivered Straight To Your Inbox</p>
+				<form action="email.php">
+					<input placeholder="Email Address..." type="text" name="email">
+					<input type="submit">
+				</form>
+			</div>
+		</div>
+
+		<div class="grid grid-pad">
+			<div class="col-2-3">
+				<main>
+					<article class="single-post-preview">
+						<div class="featured-image">
+							<span class="post-cat"><a href="#" title="Post category">Business</a></span>
+						</div>
+						<header>
+							<div class="post-meta">
+								<p>Published: <time pubdate="pubdate">4/12/16</time></p>
+								<a class="post-author" rel="author" href="/author/john-doe">John Doe</a>
+							</div>
+							<h1>
+								<a href="#" title="Post title">IT Security FAQ: Best Security Practices for iOS Devices In Today’s SMBs And Corporations</a>
+							</h1>
+						</header>
+						<div class="post-excerpt">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec elementum diam. Pellentesque sit amet eleifend massa. Cras vehicula quis turpis in lobortis. Praesent purus ligula, feugiat a orci sit amet, tempus auctor elit. Vestibulum massa erat, semper nec felis at, aliquet ultricies justo. Suspendisse id felis posuere, interdum massa a, semper turpis. Etiam iaculis sem dolor. Nunc tincidunt interdum purus at posuere. Fusce pharetra dolor sed ipsum hendrerit molestie. Pellentesque ultrices cursus sagittis. Nullam orci lorem, faucibus in tristique vitae, vestibulum ac eros...</p>
+						</div>
+						<footer>
+							<p><span>Read More</span><span>12</span></p>
+						</footer>
+					</article>
+				</main>
+			</div>
+		</div>
+
 	</body>
 </html>
