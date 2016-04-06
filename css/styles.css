@@ -54,7 +54,7 @@ body {
 .main-nav a {
   font-family: "open-sans";
   color: #000000;
-  font-size: 22px;
+  font-size: 20px;
   text-decoration: none;
   padding: 0 10px;
 }
@@ -162,7 +162,7 @@ body {
 /* Email CTA */
 .email-cta {
   margin: 20px 0 0 0;
-  padding: 0 0 20px 0;
+  padding: 0 0 30px 0;
   background-image: url('../img/cta-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -337,6 +337,27 @@ body {
   padding-right: 5px;
   font-size: 21px;
 }
+.next-prev {
+  margin-bottom: 40px;
+  overflow: auto;
+}
+.next-prev a {
+  display: block;
+  width: 150px;
+  text-decoration: none;
+  text-align: center;
+  color: #ffffff;
+  background-color: #8c8c8c;
+  padding: 10px 0;
+}
+.next-prev a:first-child {
+  float: left;
+}
+.next-prev a:last-child {
+  float: right;
+  opacity: .3;
+  cursor: default;
+}
 /* Sidebar */
 .widget {
   padding-left: 20px;
@@ -472,7 +493,7 @@ footer p {
   color: #ffffff;
   font-size: 16px;
   margin: 0;
-  padding: 20px 0;
+  padding: 0 0 20px 0;
   text-align: center;
 }
 /* Mobile Styles */
@@ -576,5 +597,14 @@ footer p {
     float: none;
     margin: 0 auto;
     display: block;
+  }
+}
+@media handheld, only screen and (max-width: 320px) {
+  .topbar .topbar-section,
+  .topbar .topbar-section a {
+    font-size: 12px;
+  }
+  .next-prev a {
+    width: 128px;
   }
 }

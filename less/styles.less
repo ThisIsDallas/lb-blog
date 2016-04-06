@@ -64,7 +64,7 @@ body {
     a {
     	font-family: "open-sans";
     	color: @black;
-    	font-size: 22px;
+    	font-size: 20px;
     	text-decoration: none;
     	padding: 0 10px;
     	&:nth-child(3) {
@@ -186,7 +186,7 @@ body {
 
 .email-cta {
 	margin: 20px 0 0 0;
-	padding: 0 0 20px 0;
+	padding: 0 0 30px 0;
 	background-image: url('../img/cta-bg.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -366,6 +366,28 @@ body {
 	}
 }
 
+.next-prev {
+	margin-bottom: 40px;
+	overflow: auto;
+	a {
+		display: block;
+		width: 150px;
+		text-decoration: none;
+		text-align: center;
+		color: #ffffff;
+		background-color: @darkGray;
+		padding: 10px 0;
+		&:first-child {
+			float: left;
+		}
+		&:last-child {
+			float: right;
+			opacity: .3;
+			cursor: default;
+		}
+	}
+}
+
 /* Sidebar */
 
 .widget {
@@ -511,7 +533,7 @@ footer {
 		color: #ffffff;
 		font-size: 16px;
 		margin: 0;
-		padding: 20px 0;
+		padding: 0 0 20px 0;
 		text-align: center;
 	}
 }
@@ -639,5 +661,15 @@ footer {
 				}
 			}
 		}
+	}
+}
+
+@media handheld, only screen and (max-width: 320px) {
+	.topbar .topbar-section,
+	.topbar .topbar-section a  {
+		font-size: 12px;
+	}
+	.next-prev a {
+		width: 128px;
 	}
 }
